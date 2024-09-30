@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ableton-like Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar Section -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="image1.png" alt="Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Live</a></li>
+                <li><a href="#">Push</a></li>
+                <li><a href="#">Note</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Packs</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">More</a></li>
+            </ul>
+            <div class="auth-links">
+                <a href="#">Try Live 12 for Free</a>
+                <a href="#">Login or Register</a>
+            </div>
+            <div class="menu-btn">
+                <span class="menu-icon">☰</span> <!-- Hamburger menu for mobile -->
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="hero">
+            <img src="image2.png" alt="Hero Image">
+            <div class="hero-overlay">
+                <h1>Ableton</h1>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Ableton. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for toggling mobile menu
+        const menuBtn = document.querySelector('.menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('mobile-menu');
+        });
+    </script>
+
+</body>
+</html>

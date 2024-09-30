@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="file"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .btn {
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #218838;
+        }
+        .btn-secondary {
+            background-color: #007bff;
+            margin-top: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            display: none;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Job Application Form</h2>
+        <form id="jobApplicationForm">
+            <!-- Personal Information -->
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" id="address" required>
+            </div>
+
+            <!-- Resume and Cover Letter -->
+            <div class="form-group">
+                <label for="resume">Upload Resume</label>
+                <input type="file" id="resume" accept=".pdf, .docx" required>
+            </div>
+            <div class="form-group">
+                <label for="coverLetter">Cover Letter</label>
+                <textarea id="coverLetter" rows="5" required></textarea>
+            </div>
+
+            <!-- Education -->
+            <div class="form-group">
+                <label for="education">Highest Level of Education</label>
+                <select id="education" required>
+                    <option value="">Select</option>
+                    <option value="High School">High School</option>
+                    <option value="Associate's Degree">Associate's Degree</option>
+                    <option value="Bachelor's Degree">Bachelor's Degree</option>
+                    <option value="Master's Degree">Master's Degree</option>
+                    <option value="PhD">PhD</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="school">School/University</label>
+                <input type="text" id="school" required>
+            </div>
+            <div class="form-group">
+                <label for="major">Major/Area of Study</label>
+                <input type="text" id="major" required>
+            </div>
+            <div class="form-group">
+                <label for="graduationYear">Graduation Year</label>
+                <input type="number" id="graduationYear" min="1900" max="2024" required>
+            </div>
+
+            <!-- Employment History -->
+            <div class="form-group">
+                <label for="previousJobTitle">Previous Job Titles</label>
+                <input type="text" id="previousJobTitle" required>
+            </div>
+            <div class="form-group">
+                <label for="company">Company Names</label>
+                <input type="text" id="company" required>
+            </div>
+            <div class="form-group">
+                <label for="employmentDates">Employment Dates</label>
+                <input type="text" id="employmentDates" required>
+            </div>
+            <div class="form-group">
+                <label for="jobResponsibilities">Job Responsibilities</label>
+                <textarea id="jobResponsibilities" rows="3" required></textarea>
+            </div>
+
+            <!-- Skills -->
+            <div class="form-group">
+                <label for="skills">Relevant Skills</label>
+                <input type="text" id="skills" required>
+            </div>
+            <div class="form-group">
+                <label for="certifications">Certifications</label>
+                <input type="text" id="certifications" required>
+            </div>
+
+            <!-- Availability -->
+            <div class="form-group">
+                <label for="startDate">Start Date</label>
+                <input type="date" id="startDate" required>
+            </div>
+            <div class="form-group">
+                <label for="relocate">Willing to Relocate</label>
+                <select id="relocate" required>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="workSchedule">Preferred Work Schedule</label>
+                <input type="text" id="workSchedule" required>
+            </div>
+
+            <!-- References -->
+            <div class="form-group">
+                <label for="referenceName">Reference Name</label>
+                <input type="text" id="referenceName" required>
+            </div>
+            <div class="form-group">
+                <label for="referenceContact">Reference Contact Information</label>
+                <input type="text" id="referenceContact" required>
+            </div>
+            <div class="form-group">
+                <label for="referenceRelation">Relationship to Applicant</label>
+                <input type="text" id="referenceRelation" required>
+            </div>
+
+            <!-- Additional Questions -->
+            <div class="form-group">
+                <label for="workReason">Why do you want to work for this company?</label>
+                <textarea id="workReason" rows="3" required></textarea>
+            </div>
+
+            <!-- Consent and Agreement -->
+            <div class="form-group">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">I agree to the terms and conditions</label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="privacyPolicy" required>
+                <label for="privacyPolicy">I acknowledge the privacy policy</label>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn">Submit Application</button>
+        </form>
+
+        <!-- Button to view application data as table -->
+        <button class="btn btn-secondary" id="viewTableBtn">View Applications as Table</button>
+
+        <!-- Table for displaying submitted applications -->
+        <table id="applicationsTable">
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Resume</th>
+                    <th>Cover Letter</th>
+                    <th>Education</th>
+                    <th>Skills</th>
+                    <th>References</th>
+                </tr>
+            </thead>
+            <tbody id="applicationsTableBody">
+                <!-- Submitted data will appear here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
